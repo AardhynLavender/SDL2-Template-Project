@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "SDL2TemplateProject"
+			"path" : "SDL2TemplateProject.exe"
+		},
+		{
+			"path" : "SDL2TemplateProject.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -49,17 +52,17 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -F/Library/Frameworks "
+					"fragment" : "-g"
 				},
 				{
-					"fragment" : "-std=gnu++2a"
+					"fragment" : "-std=gnu++20"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Library/Frameworks/SDL2.framework/Headers"
+					"path" : "C:/x86_64-w64-mingw32/include/SDL2"
 				}
 			],
 			"language" : "CXX",
@@ -91,31 +94,29 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-F/Library/Frameworks",
-				"role" : "frameworkPath"
-			},
-			{
-				"fragment" : "-Wl,-rpath,/Library/Frameworks",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-framework",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "SDL2",
+				"backtrace" : 2,
+				"fragment" : "-lmingw32",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-framework Cocoa",
+				"fragment" : "\\x86_64-w64-mingw32\\lib\\libSDL2main.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\\x86_64-w64-mingw32\\lib\\libSDL2.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "SDL2TemplateProject",
-	"nameOnDisk" : "SDL2TemplateProject",
+	"nameOnDisk" : "SDL2TemplateProject.exe",
 	"paths" : 
 	{
 		"build" : ".",

@@ -74,7 +74,7 @@ SET(SDL2_SEARCH_PATHS
         /opt/local # DarwinPorts
         /opt/csw # Blastwave
         /opt
-        C:/x86_64-w64-mingw32/lib # windows11
+        /x86_64-w64-mingw32/lib # windows11
         )
 
 FIND_PATH(SDL2_INCLUDE_DIR SDL.h
@@ -82,7 +82,7 @@ FIND_PATH(SDL2_INCLUDE_DIR SDL.h
         $ENV{SDL2DIR}
         PATH_SUFFIXES include/SDL2 include
         PATHS ${SDL2_SEARCH_PATHS}
-        C:/x86_64-w64-mingw32/include/ # windows11
+        /x86_64-w64-mingw32/include/SDL2/ # windows11
         )
 
 FIND_LIBRARY(SDL2_LIBRARY_TEMP
